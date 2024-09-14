@@ -1,4 +1,4 @@
-const apiKey = 'AIzaSyDwAL421-0OiMJi8KZg6nITlg4EQ8Bh7js'; // Reemplaza con tu clave de API
+const apiKey = 'AIzaSyDwAL421-0OiMJi8KZg6nITlg4EQ8Bh7js'; 
 const maxResults = 10;
 let currentGenre = 'todos';
 let currentLanguage = ''; // Se establecerá en 'es' o 'en'
