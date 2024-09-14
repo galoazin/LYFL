@@ -1,0 +1,358 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff6b6b;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+header h1 span {
+    color: #e74c3c;
+}
+
+/* Estilos para el contador de tiempo */
+.time-counter {
+    margin-bottom: 40px;
+    animation: pulse 2s infinite;
+}
+
+.time-counter p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#timeDisplay {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el filtro */
+.filter-container {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #1a1a1a;
+    color: #fff;
+    outline: none;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+#searchInput::placeholder {
+    color: #777;
+}
+
+.genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.genre-btn {
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.genre-btn:hover,
+.genre-btn.active {
+    background-color: #e74c3c;
+}
+
+/* Estilos para la selección de idioma */
+.language-selection {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s ease-in-out;
+    display: none; /* Ocultamos inicialmente */
+}
+
+.language-selection.show {
+    display: block; /* Mostramos cuando tenga la clase 'show' */
+}
+
+.flags-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flag-icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+    opacity: 0.7;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.videos-section {
+    margin-top: 20px;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.video-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(33% - 20px);
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.video-info p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-card:hover .play-button {
+    opacity: 1;
+}
+
+/* Estilos para el botón "Cargar más videos" */
+#loadMoreButton {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+#loadMoreButton:hover {
+    background-color: #ff6b6b;
+}
+
+/* Estilos para el contador interactivo */
+.counter-section {
+    margin-top: 50px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.counter-section h2 {
+    font-size: 20px; /* Reducir el tamaño de fuente */
+    margin-bottom: 10px;
+    color: #ffffff; /* Color más suave */
+}
+
+.counter-container {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #e74c3c;
+    border-radius: 10px;
+    animation: pulseBorder 2s infinite;
+}
+
+#peopleCounter {
+    font-size: 36px; /* Reducir el tamaño de fuente */
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Animación para el borde */
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 5px #e74c3c, 0 0 15px #e74c3c;
+    }
+    50% {
+        box-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+    }
+    100% {
+        box-shadow: 0 0 5px #e74c3c, 0 0 15px #e74c3c;
+    }
+}
+
+/* Estilos para los enlaces del pie de página */
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .video-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .video-card {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .genre-btn {
+        font-size: 12px;
+    }
+
+    #searchInput {
+        max-width: 100%;
+    }
+
+    .video-thumbnail {
+        height: 180px;
+    }
+}

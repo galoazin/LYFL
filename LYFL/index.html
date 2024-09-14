@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Your Fucking Life (LYFL)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Encabezado -->
+        <header>
+            <h1>Live Your <span>Fucking</span> Life</h1>
+            <!-- Contador de tiempo -->
+            <div class="time-counter">
+                <p>El tiempo no se detiene:</p>
+                <div id="timeDisplay"></div>
+            </div>
+            <!-- Buscador / Filtro -->
+            <div class="filter-container">
+                <input type="text" id="searchInput" placeholder="Buscar videos...">
+                <div class="genre-buttons">
+                    <button class="genre-btn active" data-genre="todos">Todos</button>
+                    <button class="genre-btn" data-genre="autoestima">Autoestima</button>
+                    <button class="genre-btn" data-genre="desamor">Desamor</button>
+                    <button class="genre-btn" data-genre="emprendimiento">Emprendimiento</button>
+                    <button class="genre-btn" data-genre="espiritualidad">Espiritualidad</button>
+                    <button class="genre-btn" data-genre="estoicismo">Estoicismo</button>
+                    <button class="genre-btn" data-genre="exito-profesional">Éxito Profesional</button>
+                    <button class="genre-btn" data-genre="hopecore">Hopecore</button>
+                    <button class="genre-btn" data-genre="mindfulness">Mindfulness</button>
+                    <button class="genre-btn" data-genre="motivacion-deportiva">Motivación Deportiva</button>
+                    <button class="genre-btn" data-genre="motivacion-estudiantes">Motivación para Estudiantes</button>
+                    <button class="genre-btn" data-genre="motivacion-gym">Motivación Gym</button>
+                    <button class="genre-btn" data-genre="positividad">Positividad</button>
+                    <button class="genre-btn" data-genre="productividad">Productividad</button>
+                    <button class="genre-btn" data-genre="resiliencia">Resiliencia</button>
+                    <button class="genre-btn" data-genre="salud-mental">Salud Mental</button>
+                    <button class="genre-btn" data-genre="superacion">Superación</button>
+                </div>
+            </div>
+            <!-- Selección de idioma (oculta inicialmente) -->
+            <div class="language-selection" id="languageSelection" style="display: none;">
+                <div class="flags-container">
+                    <img src="images/espana.png" alt="Español" class="flag-icon espana" data-lang="es">
+                    <img src="images/reino-unido.png" alt="English" class="flag-icon reino-unido" data-lang="en">
+                </div>
+            </div>
+        </header>
+
+        <!-- Sección de videos -->
+        <section class="videos-section">
+            <div class="videos-container" id="videosContainer">
+                <!-- Los videos se cargarán aquí mediante JavaScript -->
+            </div>
+            <!-- Botón para cargar más videos -->
+            <div id="loadMoreContainer" style="text-align: center; display: none;">
+                <button id="loadMoreButton">Cargar más videos</button>
+            </div>
+        </section>
+
+        <!-- Contador interactivo -->
+        <section class="counter-section">
+            <h2>Personas cambiando sus vidas ahora mismo:</h2>
+            <div class="counter-container">
+                <div id="peopleCounter">0</div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>&copy; 2023 LYFL. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="politica-privacidad.html">Política de Privacidad</a> |
+                <a href="terminos-condiciones.html">Términos y Condiciones</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
